@@ -31,8 +31,8 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 bpy.ops.wm.read_factory_settings(use_empty=True)
 
 helpers = {"__name__": "fx", "_OUTPUT_DIR": OUTPUT_DIR}
-with open(os.path.join(HERE, "fx_blender.py"), "r", encoding="utf-8") as handle:
-    exec(compile(handle.read(), "fx_blender.py", "exec"), helpers)
+with open(os.path.join(HERE, "vfx_blender.py"), "r", encoding="utf-8") as handle:
+    exec(compile(handle.read(), "vfx_blender.py", "exec"), helpers)
 fx = types.SimpleNamespace(**{name: value for name, value in helpers.items()
                                  if callable(value) and not name.startswith("_") and getattr(value, "__module__", None) == "fx"})
 

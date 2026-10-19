@@ -208,7 +208,7 @@ import bpy, numpy, os, types
 SKILL_DIR = r"<absolute skill path>"
 OUTPUT_DIR = os.path.expanduser("~/vfx-out"); os.makedirs(OUTPUT_DIR, exist_ok=True)
 _h = {"__name__": "fx", "_OUTPUT_DIR": OUTPUT_DIR}
-exec(compile(open(os.path.join(SKILL_DIR, "scripts", "fx_blender.py"), encoding="utf-8").read(), "fx_blender.py", "exec"), _h)
+exec(compile(open(os.path.join(SKILL_DIR, "scripts", "vfx_blender.py"), encoding="utf-8").read(), "vfx_blender.py", "exec"), _h)
 fx = types.SimpleNamespace(**{k: v for k, v in _h.items() if callable(v) and not k.startswith("_") and getattr(v, "__module__", None) == "fx"})
 scene = bpy.data.scenes.new("VFXJob"); bpy.context.window.scene = scene
 # ... the job ...

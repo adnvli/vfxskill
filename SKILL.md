@@ -41,7 +41,7 @@ This folder (where this file is) is `SKILL_DIR` in `tools.md`.
 | `templates/vfx/capture.lua` | Holds a playing effect at chosen moments for screenshots. |
 | `scripts/animate.mjs` | Pose compiler + motion checks + contact sheet + Luau output (Node 18+). |
 | `scripts/read_rig.lua` | Reads a creature's rig for `animate.mjs --rig-json`. |
-| `scripts/blender_job.py`, `scripts/fx_blender.py` | Runs a Blender job with the `fx.*` texture and mesh helpers. |
+| `scripts/blender_job.py`, `scripts/vfx_blender.py` | Runs a Blender job with the `fx.*` texture and mesh helpers. |
 | `scripts/texture-tool.mjs` | Checks flipbook sheets; previews textures in Studio without uploading. |
 | `scripts/upload.mjs` | Open Cloud uploads (textures, meshes, animations). |
 
