@@ -1,3 +1,3 @@
 # Credits
 
-Roqer and adn.
+adn.
